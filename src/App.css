@@ -1,4 +1,4 @@
-.App {
+/*.App {
   text-align: center;
 }
 
@@ -36,3 +36,544 @@
     transform: rotate(360deg);
   }
 }
+*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    background: transparent;
+}
+
+html{
+  scroll-behavior: smooth;
+  scroll-padding-top: 10rem;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background: rgb(30, 29, 29);
+    color:white;
+}
+
+.logoIcon{
+  display:flex;
+  color:white;
+}
+
+.logo{
+  width: 5rem;
+  height: auto;
+}
+
+.icon{
+  width: auto;
+  height: 1.5rem;
+  padding-right: 0.5rem;
+}
+
+.logoName{
+  display: flex;
+  align-items: center;
+  padding-left: 2rem;
+  font-weight: 600;
+}
+
+
+.navbar{
+  font-size: 1.5rem;
+  height: 10rem;
+  width: 100%;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 5;
+  position: sticky;
+  top: 0;
+  background: transparent;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.navbar--scrolled {
+  background: rgb(30, 29, 29); 
+  backdrop-filter: blur(8px);   
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+}
+
+.navbarLinks{
+  float:center;
+  text-decoration: none; 
+  font-weight: 600; 
+  color:white;   
+  align-items: center;
+  margin-right: 3rem;
+  margin-top: 1.5rem;
+  padding: 0 2rem;
+  transition: 0.4s;
+}
+
+a.navbarLinks:hover,
+a.navbarLinks:active{
+  color:Orange;
+  text-decoration: underline;
+}
+
+.homepage{
+  height: calc(100vh - 10rem);
+  width: 100%;
+  margin: 5rem 0rem;
+  overflow: hidden;
+}
+
+.pfp{
+  width:auto;
+  height: 100vh;
+  object-fit: cover;
+  position: absolute;
+  top:0;
+  right: 0;
+  z-index:1;
+  mask-image: radial-gradient(ellipse at center,
+    rgba(0,0,0,0.8) 0%,
+    rgba(0,0,0,0.8) 30%,
+    rgba(0,0,0,0) 80%);
+}
+
+.intro{
+  height: 70vh;
+  width: 50vw; 
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 2;
+  position:relative;
+}
+
+.introHead{
+  font-size: 6rem;
+  font-weight: 700;
+}
+
+.introName{
+  color: rgb(212, 169, 126);
+}
+
+.introPara{
+  font-size: 2rem;
+  font-weight: 200;
+}
+
+.resumeBtn{
+  width: 10rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: clamp(1rem, 2vw, 1.5rem); 
+  color: white;
+  margin: 3rem 0rem;
+  padding: 0.75rem 1rem;
+  border: 1px solid white;
+  border-radius: 1rem;
+  background-color: transparent;
+  transition: 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
+  min-height: 3rem;  
+}
+
+.resumeBtn:before{
+  content:'';
+  width: 0%;
+  height: 100%;
+  background-color: white;
+  z-index: -1;
+  transition: 0.3s ease-in-out;
+  position:absolute;
+  inset: 0;
+}
+
+.resumeBtn:hover{
+  color:rgb(30, 29, 29);
+}
+
+.resumeBtn:hover::before{
+  content:'';
+  width: 100%;
+  height: 100%;
+  position:absolute;
+}
+
+.resumeBtn .resumeImg{
+  height: 1.2em;     
+  width: auto;
+  object-fit: contain;
+  margin: 0 0.25rem 0 0;
+  padding-right: 0;
+  align-items: center;
+  transition: filter 0.3s ease;
+  filter: invert(1) brightness(2);
+}
+
+.resumeBtn:hover .resumeImg {
+  filter: invert(0) brightness(1);
+}
+
+.resumeBtn span{
+  z-index: 1;
+}
+
+.about, .experience, .contact{
+  width:100%;
+  padding-bottom: 5em;
+}
+
+.aboutHead, .experienceHead, .contactHead{
+  position: relative;
+  text-align: center;
+  font-size: 6rem;
+}
+
+.aboutPara{
+  font-size: 1.5rem;
+  font-weight: 200;
+  width: 50vw;
+  margin: 0 auto;
+}
+
+.whiteLine{
+  width: 13vw;
+  height: 0.25rem;
+  background-color: white;
+  border-radius: 0.25rem;
+  margin: 2rem auto;
+}
+
+.subHeader{
+  font-size: 3rem;
+  margin: 2rem 0;
+  position: relative;
+  text-align: center;
+}
+
+.aboutSkills {
+  width: 50vw;
+  margin: 3rem auto;
+}
+
+.skills {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.skillImg {
+  width: 10rem;
+  height: 8rem;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto 3rem;
+}
+
+.swiper_container{
+  width: 100%;
+}
+
+.swiper-control {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.arrowButton {
+  display: inline-flex;
+  margin-bottom: 2rem;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  padding: 0;
+  border-radius: 50%;
+  border: 3px solid white;
+  background-color: rgb(30, 29, 29);
+  cursor: pointer;
+  outline: none;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.arrowButton img {
+  width: 1.6rem;
+  height: 1.6rem;
+  object-fit: contain;
+  transition: filter 0.2s ease;
+  filter: invert(1) brightness(2); 
+}
+
+.arrowButton:hover {
+  background-color: white;
+  border-color: white;
+}
+
+.arrowButton:hover img {
+  filter: invert(0) brightness(1);  
+}
+
+.swiper-control .swiper-pagination .swiper-pagination-bullet {
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.swiper-control .swiper-pagination .swiper-pagination-bullet-active {
+  background: orange;
+}
+
+.aboutExperience{
+  width: 70vw;
+  height: auto;
+  display: flex;
+  padding: 4rem 0;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+
+.experienceCard {
+  box-sizing: border-box;
+  width: 30rem;
+  height: 30rem;
+  padding: 2rem;
+  border: none; 
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  background: rgba(255,255,255,0.03); 
+  box-shadow: 0 12px 30px rgba(0,0,0,0.25), 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.experienceImg {
+  margin: 0 auto;   
+  max-width: 8rem;             
+  height: 8rem;
+  border-radius: 50%;
+}
+
+.experienceName {
+  margin: 1rem auto;                    
+  font-size: 2.5rem;
+}
+
+.experience-skill-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  width: 100%;
+}
+
+.experience-skill {
+  padding: 0.4rem 0.8rem;
+  border: 1px solid white;
+  border-radius: 1rem;
+  font-size: 1rem;
+}
+
+.readMore {
+  font-family: 'Poppins', sans-serif;
+  padding: 0.4rem 0.8rem;
+  color: white;
+  border: 1px solid white;
+  border-radius: 1rem;
+  font-size: 1rem;
+  position: relative; 
+  margin-top: auto;  
+  cursor: pointer;   
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;  
+}
+
+.readMore:hover {
+  background-color: white;
+  border-color: white;
+  color: black;
+}
+
+.outsideBox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.65);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.selectedExp {
+  position: relative;
+  background: rgb(30,29,29);
+  border-radius: 1rem;
+  padding: 2rem;
+  max-width: 40vw;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.4);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  cursor: default;
+  animation: popIn 0.3s ease forwards;
+  transform-origin: center;
+}
+
+@keyframes popIn {
+  from { opacity: 0; transform: scale(0.85); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+.bulletPoints {
+  width: 70%;
+  align-self: flex-start;
+  margin: 0 auto;
+}
+
+.bulletPoints ul {
+  list-style: disc;
+  padding-left: 1.5rem;
+  margin: 0;
+}
+
+.bulletPoints li {
+  margin-bottom: 1rem; 
+  font-size: 1.2rem;
+  font-weight: 200;
+}
+
+.closeButton {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.selectedImg {
+  max-width: 9rem;
+  height: 9rem;
+  margin: 0 auto;
+  object-fit: contain;
+  border-radius: 50%;
+}
+
+.contact-form{
+  width: 100%;
+  max-width: 60rem;
+  margin: 0 auto;
+  padding: 3rem 0;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.contactPara{
+  margin-bottom: 3rem;
+  font-size: 1.5rem;
+}
+
+.contactName, .contactEmail, .contactMsg{
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 200;
+  color: white;
+  width: 100%;
+  max-width: 60rem;
+  margin: 1rem 0;
+  padding: 1rem;
+  border: none; 
+  border-radius: 0.5rem;
+  gap: 1.5rem;
+  background: rgba(255,255,255,0.03); 
+  box-shadow: 0 12px 30px rgba(0,0,0,0.25), 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.contactMsg {
+  min-height: 5rem;
+  resize: vertical;
+}
+
+.sendButton {
+  font-family: 'Poppins', sans-serif;
+  margin: 2rem 0;
+  padding: 1.5rem 5rem;
+  font-size: 2rem;
+  background-color: white;
+  color: black;
+  border: 1px solid white;
+  border-radius: 1rem;
+  font-size: 1.5rem;
+  cursor: pointer;  
+}
+
+.socials {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;    
+}
+
+.socials img {
+  width: 8rem;
+  height: 8rem;
+  object-fit: contain;
+}
+
+@media screen and (max-width:1300px){
+
+  .logoName { display: none; }
+  .pfp{
+    margin: 0 auto;
+    left: 0;
+  }
+  .introHead, .aboutHead, .experienceHead, .contactHead{
+    font-size: 3rem;
+  }
+
+  .introPara{
+    font-size: 1.5rem;
+  }
+
+  .resumeBtn span{
+    font-size: 1.2rem;
+  }
+
+  .subHeader{
+    font-size: 1.5rem;
+  }
+
+  .aboutPara{
+    font-size: 1rem;
+  }
+
+  .skillImg{
+    width: 5rem;
+    height: 4rem;
+  }
+
+  .arrowButton{
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  .arrowButton img{
+    width: 0.8rem;
+    height: 0.8rem;
+  }
+
+  .experienceCard {
+    transform: scale(0.8);
+  }
+}
+
