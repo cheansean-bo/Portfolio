@@ -1,7 +1,7 @@
-import agile from './images/agile.png'
-import git from './images/git.png'
-import postman from './images/postman.png'
-import debugging from './images/debugging.png'
+import agile from '../images/agile.png'
+import git from '../images/git.png'
+import postman from '../images/postman.png'
+import debugging from '../images/debugging.png'
 
 
 

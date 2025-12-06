@@ -1,14 +1,15 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination } from 'swiper/modules';
-import leftArrow from './images/leftarrow.png';
-import rightArrow from './images/rightarrow.png';
+import leftArrow from '../images/leftarrow.png';
+import rightArrow from '../images/rightarrow.png';
+import '../App.css'
 
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
-import SkillsCard from './skillsCard';
+import SkillsCard from './SkillsCard';
 
 
 const Skills = ({lists}) => (

@@ -85,7 +85,6 @@ body{
   font-size: 1.5rem;
   height: 10rem;
   width: 100%;
-  margin: 0 auto;
   padding: 1rem 2rem;
   display: flex;
   align-items: center;
@@ -104,16 +103,17 @@ body{
 }
 
 .navbarLinks{
-  float:center;
   text-decoration: none; 
   font-weight: 600; 
   color:white;   
   align-items: center;
   margin-right: 3rem;
-  margin-top: 1.5rem;
+  margin-top: 1.5rem; 
   padding: 0 2rem;
   transition: 0.4s;
 }
+
+
 
 a.navbarLinks:hover,
 a.navbarLinks:active{
@@ -124,7 +124,7 @@ a.navbarLinks:active{
 .homepage{
   height: calc(100vh - 10rem);
   width: 100%;
-  margin: 5rem 0rem;
+  padding: 5rem 0;
   overflow: hidden;
 }
 
@@ -146,6 +146,7 @@ a.navbarLinks:active{
   height: 70vh;
   width: 50vw; 
   padding: 4rem;
+  margin: 1rem 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -262,7 +263,7 @@ a.navbarLinks:active{
 }
 
 .aboutSkills {
-  width: 50vw;
+  width: 60vw;
   margin: 3rem auto;
 }
 
@@ -344,7 +345,7 @@ a.navbarLinks:active{
 
 .experienceCard {
   box-sizing: border-box;
-  width: 30rem;
+  width: 25rem;
   height: 30rem;
   padding: 2rem;
   border: none; 
@@ -530,6 +531,44 @@ a.navbarLinks:active{
   object-fit: contain;
 }
 
+
+@media screen and (max-width:1750px){
+  .experienceCard {
+    max-width: 20rem;
+    height: 30 rem;
+    padding: 1.5rem;
+    gap: 1rem;
+ }
+  .experienceImg {
+    max-width: 5rem;             
+    height: 5rem;
+  }
+
+  .experienceName {
+    margin: 1rem auto;                    
+    font-size: 2.5rem;
+  }
+
+  .experience-skill-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    width: 100%;
+  }
+
+  .experience-skill {
+    padding: 0.4rem 0.8rem;
+    border: 1px solid white;
+    border-radius: 1rem;
+    font-size: 1rem;
+  }
+
+  .readMore{
+    padding: 0.3rem 0.6.5rem;
+    font-size: 1rem;
+  }
+}
+
 @media screen and (max-width:1300px){
 
   .logoName { display: none; }
@@ -550,30 +589,134 @@ a.navbarLinks:active{
   }
 
   .subHeader{
+    font-size: 2rem;
+  }
+
+
+  .aboutPara{
     font-size: 1.5rem;
   }
 
-  .aboutPara{
-    font-size: 1rem;
-  }
-
   .skillImg{
-    width: 5rem;
-    height: 4rem;
+    width: 8rem;
+    height: 6rem;
   }
 
   .arrowButton{
-    width: 1.5rem;
-    height: 1.5rem;
+    width: 2.5rem;
+    height: 2.5rem;
   }
 
   .arrowButton img{
-    width: 0.8rem;
-    height: 0.8rem;
+    width: 1.25rem;
+    height: 1.25rem;
   }
 
   .experienceCard {
-    transform: scale(0.8);
+    max-width: 17rem;
+    height: 30rem;
+    padding: 1rem;
+ }
+
+ .experienceImg {
+    max-width: 3rem;             
+    height: 3rem;
+  }
+
+  .experienceName {
+    margin: 1rem auto;                    
+    font-size: 1.75rem;
+  }
+
+  .experience-skill-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    width: 100%;
+  }
+
+  .experience-skill {
+    padding: 0.4rem 0.8rem;
+    border: 1px solid white;
+    border-radius: 1rem;
+    font-size: 1rem;
+  }
+
+  .readMore{
+    padding: 0.3rem 0.6.5rem;
+    font-size: 1rem;
+  }
+  .aboutExperience{
+    width: 80vw;
   }
 }
 
+@media screen and (max-width:950px){
+  
+  .aboutSkills {
+    width: 80vw;
+    margin: 3rem auto;
+  }
+  
+  .skillImg{
+    width: 8rem;
+    height: 6rem;
+  }
+
+  .arrowButton{
+    width: 2.2rem;
+    height: 2.2rem;
+  }
+
+  .arrowButton img{
+    width: 1rem;
+    height: 1rem;
+  }
+
+  .aboutExperience{
+    width: 90vw;
+  }
+  .experienceCard {
+    max-width: 15rem;
+    height: 30rem;
+    padding: 1rem;
+ }
+
+
+ .experienceImg {
+    max-width: 3rem;             
+    height: 3rem;
+  }
+
+  .experienceName {
+    margin: 1rem auto;                    
+    font-size: 1.75rem;
+  }
+
+  .experience-skill-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    width: 100%;
+  }
+
+  .experience-skill {
+    padding: 0.4rem 0.8rem;
+    border: 1px solid white;
+    border-radius: 1rem;
+    font-size: 1rem;
+  }
+
+  .readMore{
+    padding: 0.3rem 0.6.5rem;
+    font-size: 1rem;
+  }
+
+  .contact-form{   
+    max-width: 45rem;
+  } 
+
+  .sendButton {
+    font-size:1.2rem;
+  }
+}

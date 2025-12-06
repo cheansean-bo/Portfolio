@@ -1,7 +1,7 @@
 
-import foodykps from './images/foody.jpg'
-import sisterworks from './images/sisterworks.png'
-import aubot from './images/aubot.jpg'
+import foodykps from '../images/foody.jpg'
+import sisterworks from '../images/sisterworks.png'
+import aubot from '../images/aubot.jpg'
 
 const ExperiencesList = [
     {

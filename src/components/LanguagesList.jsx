@@ -1,10 +1,10 @@
-import python from './images/python.png'
-import csharp from './images/c-sharp.png'
-import js from './images/js.png'
-import html from './images/html.png'
-import css from './images/css.png'
-import sql from './images/sql.png'
-import vba from './images/vba.png'
+import python from '../images/python.png'
+import csharp from '../images/c-sharp.png'
+import js from '../images/js.png'
+import html from '../images/html.png'
+import css from '../images/css.png'
+import sql from '../images/sql.png'
+import vba from '../images/vba.png'
 
 
 const LanguagesList = [

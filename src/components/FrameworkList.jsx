@@ -1,7 +1,7 @@
-import react from './images/react.png'
-import netcore from './images/netcore.png'
-import fastapi from './images/fastapi.svg'
-import expressjs from './images/expressjs.png'
+import react from '../images/react.png'
+import netcore from '../images/netcore.png'
+import fastapi from '../images/fastapi.svg'
+import expressjs from '../images/expressjs.png'
 
 const FrameworksList = [
     {
