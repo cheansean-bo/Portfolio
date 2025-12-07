@@ -1,43 +1,3 @@
-/*.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-*/
-
 *{
     margin: 0;
     padding: 0;
@@ -64,11 +24,9 @@ body{
 
 .logo{
   width: 5rem;
-  height: auto;
 }
 
 .icon{
-  width: auto;
   height: 1.5rem;
   padding-right: 0.5rem;
 }
@@ -80,15 +38,14 @@ body{
   font-weight: 600;
 }
 
-
 .navbar{
-  font-size: 1.5rem;
+  font-size: 1.5em;
   height: 10rem;
-  width: 100%;
   padding: 1rem 2rem;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-between; 
+  flex-grow: 1;
   z-index: 5;
   position: sticky;
   top: 0;
@@ -113,8 +70,6 @@ body{
   transition: 0.4s;
 }
 
-
-
 a.navbarLinks:hover,
 a.navbarLinks:active{
   color:Orange;
@@ -129,7 +84,7 @@ a.navbarLinks:active{
 }
 
 .pfp{
-  width:auto;
+  max-width:50vw;
   height: 100vh;
   object-fit: cover;
   position: absolute;
@@ -418,7 +373,8 @@ a.navbarLinks:active{
   background: rgb(30,29,29);
   border-radius: 1rem;
   padding: 2rem;
-  max-width: 40vw;
+  max-width: 50vw;
+  max-height: 90vh;
   box-shadow: 0 12px 30px rgba(0,0,0,0.4);
   display: flex;
   flex-direction: column;
@@ -426,6 +382,7 @@ a.navbarLinks:active{
   cursor: default;
   animation: popIn 0.3s ease forwards;
   transform-origin: center;
+  overflow-y: auto;
 }
 
 @keyframes popIn {
@@ -550,8 +507,6 @@ a.navbarLinks:active{
   }
 
   .experience-skill-list {
-    display: flex;
-    flex-wrap: wrap;
     gap: 1rem;
     width: 100%;
   }
@@ -629,8 +584,6 @@ a.navbarLinks:active{
   }
 
   .experience-skill-list {
-    display: flex;
-    flex-wrap: wrap;
     gap: 1rem;
     width: 100%;
   }
@@ -649,13 +602,53 @@ a.navbarLinks:active{
   .aboutExperience{
     width: 80vw;
   }
+
+  .selectedExp {
+    max-width: 70vw !important;
+  }
 }
 
-@media screen and (max-width:950px){
+@media screen and (max-width:1000px){
+  
+  .logo{
+    width: 7vw;
+  }
+  .navbar{
+    font-size: 2.3vw;
+  }
+
+  .navbar .ms-auto{
+    margin-right: 7vw;
+  }
+  .navbarLinks{
+    margin-right: 0;
+  }
+  .resumeBtn span{
+    font-size: 1.5vw;
+  }
+  
+  .resumeBtn{
+    width:15vw;
+  }
+
+  .introHead{
+    font-size: 5vw;
+  }
+
+  .introPara{
+    font-size: 2vw;
+  }
+
+  .aboutHead, .experienceHead, .contactHead{
+    font-size: 6vw;
+  }
+
+  .aboutPara{
+    font-size: 2vw;
+  }
   
   .aboutSkills {
     width: 80vw;
-    margin: 3rem auto;
   }
   
   .skillImg{
@@ -676,12 +669,12 @@ a.navbarLinks:active{
   .aboutExperience{
     width: 90vw;
   }
+
   .experienceCard {
     max-width: 15rem;
     height: 30rem;
     padding: 1rem;
  }
-
 
  .experienceImg {
     max-width: 3rem;             
@@ -690,26 +683,19 @@ a.navbarLinks:active{
 
   .experienceName {
     margin: 1rem auto;                    
-    font-size: 1.75rem;
-  }
-
-  .experience-skill-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    width: 100%;
+    font-size: 3vw;
   }
 
   .experience-skill {
     padding: 0.4rem 0.8rem;
     border: 1px solid white;
     border-radius: 1rem;
-    font-size: 1rem;
+    font-size: 1.5vw;
   }
 
   .readMore{
     padding: 0.3rem 0.6.5rem;
-    font-size: 1rem;
+    font-size: 1.7vw;
   }
 
   .contact-form{   
@@ -717,6 +703,7 @@ a.navbarLinks:active{
   } 
 
   .sendButton {
-    font-size:1.2rem;
+    font-size: 2.2vw;
   }
+
 }

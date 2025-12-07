@@ -15,8 +15,9 @@ function Navigation() {
 
 
   return (
+
     <Navbar
-      expand="lg"
+      
       fixed="top"
       className={`navbar ${scrolled ? 'navbar--scrolled' : ''}`}
     >     
@@ -25,7 +26,6 @@ function Navigation() {
         <span className="logoName">CHEANSEAN BO</span>
       </Navbar.Brand>
 
-      <Navbar.Toggle />
       <Navbar.Collapse>
         <Nav className="ms-auto">
           <Nav.Link href="#home" className="navbarLinks" onClick={() => window.scrollTo({top: 0})}>HOME</Nav.Link>
