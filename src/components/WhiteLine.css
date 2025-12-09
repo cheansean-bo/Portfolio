@@ -1,0 +1,13 @@
+.whiteLine {
+  width: 13vw;
+  height: 0.25rem;
+  background-color: white;
+  border-radius: 0.25rem;
+  margin: 2rem auto;
+}
+
+@media screen and (max-width: 440px) {
+  .whiteLine {
+    width: 6rem;
+  }
+}

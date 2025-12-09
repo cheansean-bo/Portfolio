@@ -1,7 +1,6 @@
-import React from 'react';
-import '../App.css';
+import "./SkillsCard.css";
 
-const SkillsCard = ( props ) => {
+const SkillsCard = (props) => {
   return (
     <div className="skillCard">
       <img src={props.img} alt={props.name} className="skillImg" />

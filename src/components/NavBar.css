@@ -1,0 +1,225 @@
+.logoIcon {
+  display: flex;
+  color: white;
+}
+
+.logo {
+  width: 5rem;
+}
+
+.icon {
+  height: 1.5rem;
+  padding-right: 0.5rem;
+}
+
+.navHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.logoName {
+  display: flex;
+  align-items: center;
+  padding-left: 2rem;
+  font-weight: 600;
+}
+
+.navbar {
+  font-size: 1.5rem;
+  height: 10rem;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-grow: 1;
+  z-index: 5;
+  position: sticky;
+  top: 0;
+  background: transparent;
+  transition:
+    background-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.navbar--scrolled {
+  background: rgb(30, 29, 29);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.navbarToggle {
+  display: none;
+  height: 6rem;
+  z-index: 5;
+  position: sticky;
+  top: 0;
+  background: transparent;
+  transition:
+    background-color 0.3s ease,
+    box-shadow 0.3s ease,
+    opacity 0.2s ease,
+    transform 0.2s ease;
+}
+
+.navbarToggle--scrolled {
+  background: rgb(30, 29, 29);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.navbarToggle--hidden {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-4px);
+}
+
+.navbarLinks {
+  text-decoration: none;
+  font-weight: 600;
+  color: white;
+  align-items: center;
+  margin-right: 3rem;
+  margin-top: 1.5rem;
+  padding: 0 2rem;
+  transition: 0.4s;
+}
+
+a.navbarLinks:hover,
+a.navbarLinks:active {
+  color: Orange;
+  text-decoration: underline;
+}
+
+.navToggleOpen,
+.navToggleClose {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.navToggleOpen {
+  margin: 1rem;
+  transition:
+    background-color 0.3s ease,
+    box-shadow 0.3s ease,
+    backdrop-filter 0.3s ease,
+    opacity 0.2s ease,
+    transform 0.2s ease;
+}
+
+.navToggleIcon {
+  height: 2rem;
+  width: 2rem;
+  filter: invert(1) brightness(2);
+  border: solid 1px black;
+  padding: 0.1rem;
+  border-radius: 0.3rem;
+}
+
+.navToggleClose {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  color: white;
+  padding: 0.25rem;
+  margin: 0;
+  font-size: 1.2rem;
+  flex: 0 0 auto;
+}
+
+.navOverlay {
+  width: 100vw;
+  height: 100vh;
+  display: none;
+}
+
+@media screen and (max-width: 1440px) {
+  .logoName {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .logo {
+    width: 7vw;
+  }
+
+  .navbar {
+    font-size: 1.3rem;
+  }
+
+  .navbar .ms-auto {
+    margin-right: 7vw;
+  }
+  
+  .navbarLinks {
+    margin-right: 0;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .navbarToggle {
+    display: block;
+  }
+
+  .navToggleOpen,
+  .navToggleClose {
+    display: block;
+  }
+
+  .navToggleOpen {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    z-index: 6;
+  }
+
+  .navHeader {
+    padding: 1rem 1.5rem 0 1.5rem;
+  }
+
+  .navToggleClose {
+    margin: 1rem 1rem 0 auto;
+  }
+
+  .navOverlay.show {
+    display: block;
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.55);
+    z-index: 4;
+  }
+
+  .navbar {
+    font-size: 0.8rem;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100vh;
+    width: min(14em, 100%);
+    border-left: 1px solid rgba(0, 0, 0, 0.25);
+    flex-direction: column;
+    justify-content: flex-start;
+    transition: right 0.3s ease-out;
+    padding: 0;
+    background: rgb(30, 29, 29);
+    z-index: 5;
+  }
+
+  .navbar.show {
+    right: 0;
+  }
+
+  .navbarUl {
+    display: flex;
+    flex-direction: column;
+    padding-right: 3rem;
+    border-bottom: none;
+  }
+}

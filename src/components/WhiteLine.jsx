@@ -1,12 +1,6 @@
-import React from 'react'
-import '../App.css'
+import "./WhiteLine.css";
 
-function WhiteLine(){
-    return(
-    <div className = 'whiteLine'>
-
-    </div> 
-      
-    )
+function WhiteLine() {
+  return <div className="whiteLine"></div>;
 }
-export default WhiteLine
+export default WhiteLine;

@@ -1,17 +1,19 @@
-import HomePage from "./sections/HomePage";
-import Navigation from "./components/NavBar";
-import About from "./sections/about";
-import Experience from "./sections/experience";
+import Footer from "./components/Footer";
+import NavBar from "./components/NavBar";
+import About from "./sections/About";
 import Contact from "./sections/contact";
+import Experience from "./sections/experience";
+import HomePage from "./sections/HomePage";
 
 function App() {
   return (
     <div>
-      <Navigation/>
-      <HomePage/>
-      <About/>
-      <Experience/>
-      <Contact/>
+      <NavBar />
+      <HomePage />
+      <About />
+      <Experience />
+      <Contact />
+      <Footer />
     </div>
   );
 }

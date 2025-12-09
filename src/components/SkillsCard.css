@@ -1,0 +1,33 @@
+.skillImg {
+  width: 10rem;
+  height: 8rem;
+  object-fit: contain;
+  display: block;
+  /* margin: 0 auto 3rem;  */
+}
+
+.skillCard {
+  width: fit-content;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 1440px) {
+  .skillImg {
+    width: 8rem;
+    height: 6rem;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .skillImg {
+    width: 8rem;
+    height: 6rem;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .skillImg {
+    width: 6rem;
+    height: 5rem;
+  }
+}

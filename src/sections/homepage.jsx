@@ -1,21 +1,29 @@
-import React from 'react';
-import '../App.css';
-import Photo from '../images/photo.jpg';
-import ResumeImg from '../images/resume.png';
-import Resume from '../images/CheanseanBo_Resume.pdf'
+import "../components/HomePage.css";
+import Photo from "../images/photo.jpg";
+import ResumeImg from "../images/resume.png";
 
 function HomePage() {
   return (
     <section id="home">
-      <div className='homepage'>
-          <div className='intro'>
-              <span className="introHead">HELLO!<br/> I'M <span className="introName">CHEANSEAN BO</span></span>
-              <p className='introPara'><br/>A recent computer science graduate, eager to contribute into a software development world.</p>
-              <a className="resumeBtn" href={Resume} download='CheanseanBo_Resume.pdf'>         
-                  <img src={ResumeImg} alt="resumeImg" className="resumeImg"/><span>RESUME</span>
-              </a>
-          </div>
-          <img src={Photo} alt="pfp" className="pfp" />
+      <div className="homepage">
+        <div className="intro">
+          <span className="introHead">
+            HELLO!
+            <br /> I'M <span className="introName">CHEANSEAN BO</span>
+          </span>
+          <p className="introPara">
+            <br />I build efficient, scalable solutions using Javascript and
+            Python, specializing in automation and data-driven systems.
+          </p>
+          <a
+            className="resumeBtn"
+            href="https://drive.google.com/file/d/1-Gt7gj0KVc6mok1MBWANCyfpczhhMp8z/view?usp=sharing"
+          >
+            <img src={ResumeImg} alt="resumeImg" className="resumeImg" />
+            <span>RESUME</span>
+          </a>
+        </div>
+        <img src={Photo} alt="pfp" className="pfp" />
       </div>
     </section>
   );

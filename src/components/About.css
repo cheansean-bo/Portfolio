@@ -1,0 +1,82 @@
+.about {
+  width: 100%;
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+
+.aboutHead {
+  position: relative;
+  text-align: center;
+  font-size: 6rem;
+}
+
+.aboutPara {
+  font-size: 1.5rem;
+  font-weight: 200;
+  width: 50vw;
+  margin: 0 auto;
+}
+
+.subHeader {
+  font-size: 3rem;
+  margin: 2rem 0;
+  position: relative;
+  text-align: center;
+}
+
+.subHeader {
+  font-size: 3rem;
+  margin: 2rem 0;
+  position: relative;
+  text-align: center;
+}
+
+@media screen and (max-width: 1440px) {
+  .aboutHead {
+    font-size: 3rem;
+  }
+
+  .aboutPara {
+    font-size: 1.5rem;
+  }
+
+  .subHeader {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .aboutHead {
+    font-size: 3rem;
+  }
+
+  .aboutPara {
+    font-size: 1.3rem;
+    width: 60vw;
+  }
+
+  .aboutSkills {
+    width: 80vw;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .aboutHead {
+    font-size: 2.5rem;
+  }
+
+  .aboutPara {
+    font-size: 1rem;
+    width: 80vw;
+    text-align: center;
+  }
+
+  .resumeBtn span {
+    font-size: 1rem;
+    font-weight: 200;
+  }
+
+  .subHeader {
+    font-size: 2.5rem;
+  }
+}

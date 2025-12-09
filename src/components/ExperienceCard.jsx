@@ -1,19 +1,20 @@
-import React from 'react';
-import '../App.css';
+import "./ExperienceCard.css";
 
-const ExperienceCard = ( props ) => {
+const ExperienceCard = (props) => {
   return (
     <div className="experienceCard">
       <img src={props.img} alt={props.name} className="experienceImg" />
       <p className="experienceName">{props.name}</p>
-      <div className="experience-skill-list">
+      <div className="experienceSkillList">
         {props.skills.map((skill, idx) => (
-          <span key={idx} className="experience-skill">
+          <span key={idx} className="experienceSkill">
             {skill}
           </span>
         ))}
       </div>
-      <button className="readMore" onClick={props.onReadMore}>Read More</button>
+      <button className="readMore" onClick={props.onReadMore}>
+        Read More
+      </button>
     </div>
   );
 };

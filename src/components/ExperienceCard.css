@@ -1,0 +1,196 @@
+.experienceCard {
+  box-sizing: border-box;
+  width: 25rem;
+  height: auto;
+  padding: 2rem;
+  border: none;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  background: rgba(255, 255, 255, 0.03);
+  box-shadow:
+    0 12px 30px rgba(0, 0, 0, 0.25),
+    0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.experienceImg {
+  margin: 0 auto;
+  max-width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+}
+
+.experienceName {
+  margin: 1rem auto;
+  font-size: 2.5rem;
+}
+
+.experienceSkillList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  width: 100%;
+}
+
+.experienceSkill {
+  padding: 0.4rem 0.8rem;
+  border: 1px solid white;
+  border-radius: 1rem;
+  font-size: 1rem;
+}
+
+.readMore {
+  font-family: "Poppins", sans-serif;
+  padding: 0.4rem 0.8rem;
+  color: white;
+  border: 1px solid white;
+  border-radius: 1rem;
+  font-size: 1rem;
+  position: relative;
+  margin-top: auto;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.readMore:hover {
+  background-color: white;
+  border-color: white;
+  color: black;
+}
+
+@media screen and (max-width: 1750px) {
+  .experienceCard {
+    max-width: 20rem;
+    height: 30 rem;
+    padding: 1.5rem;
+    gap: 1rem;
+  }
+  .experienceImg {
+    max-width: 5rem;
+    height: 5rem;
+  }
+
+  .experienceName {
+    margin: 1rem auto;
+    font-size: 2.5rem;
+  }
+
+  .experienceSkillList {
+    gap: 1rem;
+    width: 100%;
+  }
+
+  .experienceSkill {
+    padding: 0.4rem 0.8rem;
+    border: 1px solid white;
+    border-radius: 1rem;
+    font-size: 1rem;
+  }
+
+  .readMore {
+    padding: 0.3rem 0.5rem;
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .experienceCard {
+    max-width: 17rem;
+    padding: 1rem;
+  }
+
+  .experienceImg {
+    max-width: 3rem;
+    height: 3rem;
+  }
+
+  .experienceName {
+    margin: 1rem auto;
+    font-size: 1.75rem;
+  }
+
+  .experienceSkillList {
+    gap: 1rem;
+    width: 100%;
+  }
+
+  .experienceSkill {
+    padding: 0.4rem 0.8rem;
+    border: 1px solid white;
+    border-radius: 1rem;
+    font-size: 1rem;
+  }
+
+  .readMore {
+    padding: 0.3rem 0.5rem;
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .experienceCard {
+    width: 100%;
+    max-width: 90vw;
+    padding: 1.5rem;
+  }
+
+  .experienceImg {
+    max-width: 3rem;
+    height: 3rem;
+  }
+
+  .experienceName {
+    margin: 1rem auto;
+    font-size: 3vw;
+  }
+
+  .experienceSkill {
+    padding: 0.4rem 0.8rem;
+    border: 1px solid white;
+    border-radius: 1rem;
+    font-size: 1.5vw;
+  }
+
+  .readMore {
+    padding: 0.3rem 0.5rem;
+    font-size: 1.7vw;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .experienceCard {
+    width: 100%;
+    max-width: 90vw;
+  }
+
+  .experienceImg {
+    max-width: 5rem;
+    height: 5rem;
+  }
+
+  .experienceName {
+    margin: 1rem auto;
+    font-size: 1.3rem;
+  }
+
+  .experienceSkill {
+    padding: 0.4rem 0.8rem;
+    border: 1px solid white;
+    border-radius: 1rem;
+    font-size: 0.6rem;
+  }
+
+  .readMore {
+    padding: 0.3rem 0.5rem;
+    margin-top: 0;
+    font-size: 0.6rem;
+  }
+
+  .experienceWork {
+    display: none;
+  }
+}

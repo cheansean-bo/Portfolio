@@ -1,0 +1,159 @@
+.experience {
+  width: 100%;
+  padding-bottom: 5em;
+}
+
+.experienceHead {
+  position: relative;
+  text-align: center;
+  font-size: 6rem;
+}
+
+.aboutExperience {
+  width: 70%;
+  height: auto;
+  display: flex;
+  padding: 4rem 0;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+
+.outsideBox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.selectedExp {
+  position: relative;
+  background: rgb(30, 29, 29);
+  border-radius: 1rem;
+  padding: 2rem;
+  max-width: 50%;
+  max-height: 90%;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  cursor: default;
+  animation: popIn 0.3s ease forwards;
+  transform-origin: center;
+  overflow-y: auto;
+}
+
+@keyframes popIn {
+  from {
+    opacity: 0;
+    transform: scale(0.85);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.bulletPoints {
+  width: 70%;
+  align-self: flex-start;
+  margin: 0 auto;
+}
+
+.bulletPoints ul {
+  list-style: disc;
+  padding-left: 1.5rem;
+  margin: 0;
+}
+
+.bulletPoints li {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  font-weight: 200;
+}
+
+.closeButton {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.selectedImg {
+  max-width: 9rem;
+  height: 9rem;
+  margin: 0 auto;
+  object-fit: contain;
+  border-radius: 50%;
+}
+
+@media screen and (max-width: 1440px) {
+  .experienceHead {
+    font-size: 3rem;
+  }
+
+  .selectedExp {
+    max-width: 70% !important;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .experienceHead {
+    font-size: 3rem;
+  }
+
+  .aboutExperience {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 0;
+    margin: 0 auto;
+    justify-content: flex-start;
+  }
+
+  .bulletPoints {
+    width: 80%;
+  }
+
+  .bulletPoints li {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .aboutExperience {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 0;
+    margin: 0 auto;
+    justify-content: flex-start;
+  }
+
+  .bulletPoints {
+    width: 100%;
+  }
+
+  .bulletPoints li {
+    font-size: 0.8rem;
+  }
+
+  .closeButton {
+    font-size: 2rem;
+  }
+
+  .selectedImg {
+    max-width: 5rem;
+    height: 5rem;
+    margin-top: 1rem;
+  }
+}
